@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.mihret.webbrowsertest.WebBrowserTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 36.725 sec - in com.mihret.webbrowsertest.WebBrowserTest
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 32.305 sec <<< FAILURE! - in com.mihret.webbrowsertest.WebBrowserTest
+testWebBrowser  Time elapsed: 32.276 sec  <<< FAILURE!
+java.lang.AssertionError: The product topic of the second product does not contain the text 'Nikon D3X'
+	at com.mihret.webbrowsertest.WebBrowserTest.testWebBrowser(WebBrowserTest.java:119)
+

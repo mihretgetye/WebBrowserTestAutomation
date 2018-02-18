@@ -74,15 +74,11 @@ public class WebBrowserTest {
 		}
 		if (driver.equalsIgnoreCase("firefox")){
 			if (!driverExePath.isEmpty()){
-				//System.setProperty("webdriver.firefox.marionette", driverExePath);
+
 				System.setProperty("webdriver.gecko.driver", driverExePath);
 				System.setProperty("webdriver.firefox.marionette", "false");
-				//DesiredCapabilities capabilities = DesiredCapabilities.firefox();
-				//capabilities.setCapability("marionette", true);
-				//WebDriver driver = new FirefoxDriver(capabilities);
 			}
 			webDriver = new FirefoxDriver();
-			//webDriver = new FirefoxDriver(capabilities);
 		}
 		else if (driver.equalsIgnoreCase("chrome")){
 			if (!driverExePath.isEmpty()){
@@ -120,8 +116,7 @@ public class WebBrowserTest {
 		findAndTakeAction(by, "click", "");
 		String secondProduct = webDriver.getTitle();
 		String msgUponFailure = "The product topic of the second product does not contain the text 'Nikon D3X'";
-		//assertTrue(msgUponFailure, secondProduct.contains("Nikon D3X"));
-		assertFalse(msgUponFailure, secondProduct.contains("Nikon D3X"));
+		assertTrue(msgUponFailure, secondProduct.contains("Nikon D3X"));
 		
 	}
 	
